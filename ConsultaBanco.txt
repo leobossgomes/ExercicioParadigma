@@ -1,0 +1,3 @@
+SELECT (SELECT nome from Departamento where Departamento.id = Pessoa.depid) as Departamento , Pessoa.nome, MAX(Pessoa.salario) as Salario
+FROM Pessoa, Departamento
+GROUP BY Pessoa.depid
